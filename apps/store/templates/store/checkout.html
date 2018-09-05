@@ -11,8 +11,19 @@
 </head>
 
 <body>
-        <a href="/">Store Page</a><br><br>
-    Checkout
+    <div class="container">
+        <h1>Thank you for your business!</h1>
+        <p>We charged your credit card for ${{request.session.current_purchase}}.</p>
+        <p>You have ordered {{request.session.item_count}} items so far and spent {{request.session.total}} with Amadon.com!</p>
+        <br><br>
+        <form action="/">
+            <input type="submit" value="Go Back">
+        </form>
+        <br><br>
+        <form action="/reset">
+            <input type="submit" value="Reset Cart">
+        </form>
+    </div>
 </body>
 
 </html>
